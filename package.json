@@ -2,7 +2,9 @@
   "name": "dota2",
   "version": "6.0.1",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "deferred": "^0.7.9",
+    "express": "^4.16.3",
     "long": "^3.2.0",
     "merge": "^1.2.0",
     "moment": "^2.19.4",
@@ -16,7 +18,8 @@
   },
   "scripts": {
     "update": "bash update_proto.sh",
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node --inspect getLiveGames.js"
   },
   "readmeFilename": "README.md",
   "description": "A node-steam plugin for Dota 2.",

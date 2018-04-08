@@ -89,6 +89,7 @@ Dota2.schema = Protobuf.loadSync(folder.map(filename => __dirname + '/proto/' + 
  * @fires module:Dota2.Dota2Client#event:topFriendMatchesData
  * @fires module:Dota2.Dota2Client#event:tipResponse
  * @fires module:Dota2.Dota2Client#event:tipped
+ * @fires module:Dota2.Dota2Client#event:spectateFriendGame
  */
 Dota2.Dota2Client = function Dota2Client(steamClient, debug, debugMore) {
     EventEmitter.call(this);
@@ -359,20 +360,5 @@ handlers[Dota2.schema.lookupEnum("EGCBaseClientMsg").values.k_EMsgGCClientConnec
     }
 };
 
-
-require("./handlers/cache");
-require("./handlers/inventory");
-require("./handlers/chat");
-require("./handlers/guild");
 require("./handlers/community");
 require("./handlers/helper");
-require("./handlers/match");
-require("./handlers/lobbies");
-require("./handlers/parties");
-require("./handlers/leagues");
-require("./handlers/sourcetv");
-require("./handlers/team");
-require("./handlers/custom");
-require("./handlers/general");
-require("./handlers/fantasy");
-require("./handlers/compendium");
